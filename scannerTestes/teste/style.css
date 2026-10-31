@@ -1,0 +1,236 @@
+* {
+    box-sizing: border-box;
+}
+
+
+body {
+    margin: 0;
+    min-height: 100vh;
+
+    background-color: #181825;
+
+    font-family: Arial, sans-serif;
+}
+
+
+.scanner {
+    width: 100%;
+    min-height: 100vh;
+
+    display: flex;
+    flex-direction: column;
+
+    align-items: center;
+}
+
+
+.imagem-container {
+    width: 100%;
+
+    display: flex;
+
+    justify-content: center;
+    align-items: flex-start;
+
+    padding: 20px;
+
+    order: 1;
+}
+
+
+.imagem-container img {
+    display: block;
+
+    width: auto;
+    height: 500px;
+
+    max-width: 90vw;
+
+    object-fit: contain;
+}
+
+
+.painel {
+    width: min(700px, 90%);
+
+    background-color: #2F304A;
+
+    border-radius: 10px;
+
+    padding: 25px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    order: 2;
+}
+
+
+.campo-nome {
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 10px;
+
+    width: 100%;
+
+}
+
+
+.campo-nome label {
+
+    color: white;
+
+    font-size: 20px;
+
+}
+
+
+.campo-nome input {
+
+    width: 250px;
+
+    padding: 10px;
+
+    border: none;
+
+    border-radius: 5px;
+
+    font-size: 16px;
+
+    outline: none;
+
+}
+
+
+#botaoScannear {
+
+    margin-top: 15px;
+
+    padding: 12px 60px;
+
+    border: none;
+
+    border-radius: 5px;
+
+    background-color: #6C7086;
+
+    color: white;
+
+    font-size: 18px;
+
+    font-weight: bold;
+
+    cursor: pointer;
+
+    transition: 0.2s;
+
+}
+
+
+#botaoScannear:hover {
+
+    background-color: #C042AF;
+
+}
+
+
+.frase {
+
+    margin-top: 15px;
+
+    min-height: 50px;
+
+    color: #E161B0;
+
+    font-size: 24px;
+
+    text-align: center;
+
+    white-space: pre-line;
+
+}
+
+
+.painel h2 {
+
+    margin-top: 10px;
+
+    margin-bottom: 10px;
+
+    color: white;
+
+    font-size: 24px;
+
+}
+
+
+.tabela-rank {
+
+    width: 100%;
+
+    height: 250px;
+
+    overflow-y: auto;
+
+    background-color: #45475A;
+
+    border-radius: 5px;
+
+    padding: 10px;
+
+}
+
+
+.ranking-linha {
+
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 10px;
+
+    padding: 5px 20px;
+
+    color: white;
+
+    border-bottom: 1px solid #5a5b70;
+
+}
+
+
+.ranking-linha:last-child {
+
+    border-bottom: none;
+
+}
+
+
+@media (max-width: 600px) {
+
+    .campo-nome {
+
+        flex-direction: column;
+
+    }
+
+
+    .campo-nome input {
+
+        width: 100%;
+
+    }
+
+
+    .imagem-container img {
+
+        max-height: 400px;
+
+    }
+
+}

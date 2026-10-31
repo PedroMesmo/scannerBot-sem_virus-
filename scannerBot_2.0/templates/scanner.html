@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scanner</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <header id="banner-personagem">
+        <img
+            id="personagem"
+            src="{{ url_for('static', filename='scanner.png') }}"
+            alt="Personagem deitado"
+        >
+    </header>
+
+    <main>
+        <h1>Scanner</h1>
+
+        <form action="/scannear" method="POST">
+            <label for="nome">Nome:</label>
+            <input type="text" id="nome" name="nome" required>
+            <button type="submit">Scannear</button>
+        </form>
+
+        <h2>{{ frase }}</h2>
+
+        <div id="listas">
+            <div id="lista1">
+                <ul>
+                    {% for dado in dados %}
+                    <li>{{ dado[0] }}</li>
+                    {% endfor %}
+                </ul>
+            </div>
+
+            <div id="lista2">
+                <ul>
+                    {% for dado in dados %}
+                    <li>{{ dado[1] }}</li>
+                    {% endfor %}
+                </ul>
+            </div>
+        </div>
+    </main>
+</body>
+</html>

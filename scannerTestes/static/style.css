@@ -1,0 +1,9 @@
+*{
+    align-items: center;
+}
+
+#listas{
+    display: flex;
+    gap: 20px;
+}
+
